@@ -1,4 +1,4 @@
 # Main script for FizzBuzz
 
-def fizzbuzz():
+def FizzBuzz():
     pass
