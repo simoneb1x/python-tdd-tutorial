@@ -19,3 +19,9 @@ class PigLatinTest(unittest.TestCase):
 
     def test_this_is_my_string(self):
         self.assertEqual(pig_it("This is my string"), "hisTay siay ymay tringsay")
+
+    def test_cancel_the_daily_scrum(self):
+        self.assertEqual(pig_it("Cancel the Daily Scrum"), "ancelCay hetay ailyDay crumSay")
+
+    def test_cancel_the_daily_scrum(self):
+        self.assertEqual(pig_it("Today is a good day"), "odayTay siay aay oodgay ayday")
