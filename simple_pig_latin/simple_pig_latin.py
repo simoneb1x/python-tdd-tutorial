@@ -1,5 +1,19 @@
 import string
 
+# Second solution, refactored
+
+def pig_it(text):
+    # first list where I split the words based on whitespaces
+    text_splitted = text.split()
+
+    # list comprehension:
+    # if word == punctuation, just simply append it without transforming
+    # else, transform the word as requested and append it
+    return ' '.join([word[1:] + word[0] + "ay" if word.isalpha() else word for word in text_splitted])
+
+
+# First solution, just to pass the green phase
+"""
 def pig_it(text):
     # first list where I split the words based on whitespaces
     text_splitted = text.split()
@@ -23,3 +37,4 @@ def pig_it(text):
     output = ' '.join(output)
 
     return output
+"""

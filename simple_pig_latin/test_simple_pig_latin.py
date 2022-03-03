@@ -37,3 +37,6 @@ class PigLatinTest(unittest.TestCase):
     
     def test_o_tempora_o_mores(self):
         self.assertEqual(pig_it("O tempora o mores !"), "Oay emporatay oay oresmay !")
+
+    def test_more_than_one_punctuation(self):
+        self.assertEqual(pig_it("Hic et nunc ? Sic transit gloria mundi !"), "icHay teay uncnay ? icSay ransittay loriagay undimay !")
