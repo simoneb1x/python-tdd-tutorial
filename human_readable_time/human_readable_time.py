@@ -1,14 +1,8 @@
 def make_readable(seconds):
 
     if seconds > 359999:
-        raise ValueError('Invalid number of seconds: {}'.format(seconds))
+        raise ValueError('Invalid number.')
     
-    s = seconds % 60
-    seconds //= 60
-
-    m = seconds % 60
-    seconds //= 60
-
-    h = seconds
-
-    return '{:02d}:{:02d}:{:02d}'.format(h, m, s)
+    hours, seconds = divmod(seconds, 60 ** 2)
+    minutes, seconds = divmod(seconds, 60)
+    return '{:02}:{:02}:{:02}'.format(hours, minutes, seconds)
