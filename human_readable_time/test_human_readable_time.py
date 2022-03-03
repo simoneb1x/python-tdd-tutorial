@@ -31,3 +31,10 @@ class HumanReadableTimeTest(unittest.TestCase):
 
     def test_complex_three(self):
         self.assertEqual(make_readable(87392), "24:16:32")
+
+    def test_complex_four(self):
+        self.assertEqual(make_readable(86399), "23:59:59")
+    
+    def test_complex_five(self):
+        self.assertEqual(make_readable(359999), "99:59:59")
+    
