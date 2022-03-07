@@ -19,10 +19,9 @@ def format_duration(seconds):
     if seconds == 0:
         return "now"
 
-    y = seconds // (3600*24*365)
-    d = (seconds % (3600*24*365))//(3600*24)
-    h = (seconds % (3600*24)) // 3600
-    m = (seconds % 3600) // 60
-    s = seconds % 60
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    d, h = divmod(h, 24)
+    y, d = divmod(d, 365)
 
     return readable([form(y,"year"),form(d,"day"),form(h,"hour"),form(m,"minute"),form(s,"second")])
