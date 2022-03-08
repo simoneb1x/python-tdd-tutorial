@@ -24,3 +24,15 @@ class HumanReadableTimeTest(unittest.TestCase):
 
     def test_five(self):
         self.assertEqual(middle_permutation("abcdxgz"),"dczxgba")
+    
+    def test_six(self):
+        self.assertEqual(middle_permutation("biqyuhjvzcfkrxgodltmpsena"),"mlzyxvutsrqponkjihgfedcba")
+    
+    def test_seven(self):
+        self.assertEqual(middle_permutation("yrwvbtezsilcqakmhjndgxp"),"mlzyxwvtsrqpnkjihgedcba")
+    
+    def test_eight(self):
+        self.assertEqual(middle_permutation("laiyxtbpohc"),"liyxtpohcba")
+    
+    def test_nine(self):
+        self.assertEqual(middle_permutation("ijtqalxprdmgwfkvuyhbszcnoe"),"mzyxwvutsrqponlkjihgfedcba")
