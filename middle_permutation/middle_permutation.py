@@ -1,15 +1,7 @@
-import math
-
-def middle_permutation(string): 
-    ans, tmp = '', sorted(list(string)) 
-    dividend = math.factorial(len(tmp)) // 2 - 1 
-    for i in range(len(tmp)): 
-        perms = math.factorial(len(tmp)) // len(tmp) 
-        if len(tmp) == 1: 
-            ans += tmp[0] 
-            break 
-        letter = tmp[dividend // perms] 
-        ans += letter 
-        tmp.remove(letter) 
-        dividend -= perms * (dividend // perms) 
-    return ans
+def middle_permutation(string):
+    
+    sorted_string = sorted(string)
+    if len(sorted_string) % 2 == 0:
+        return sorted_string.pop(len(sorted_string) // 2 - 1) + ''.join(sorted_string[::-1])
+    else:
+        return sorted_string.pop(len(sorted_string) // 2) + middle_permutation(sorted_string)
